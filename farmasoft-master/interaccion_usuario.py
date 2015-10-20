@@ -7,7 +7,7 @@ def ingresar_numero(numero_minimo, numero_maximo):
     Devuelve el número ingresado en formato entero.
     '''
     while True:
-        ingreso = raw_input()
+        ingreso = input()
         if not ingreso.isdigit():
             print ("El ingreso debe ser numérico.")
         elif not numero_minimo <= int(ingreso) <= numero_maximo:

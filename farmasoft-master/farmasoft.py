@@ -24,9 +24,9 @@ def consultar_productos_mas_vendidos(archivo):
     Se le solicita al usuario la cantidad de productos que quiere listar.
     '''
     # Obtiene la cantidad a mostrar.
-    print ("Ingrese la cantidad de productos a listar [1-%d]." % CANT_MAX_RESULTADOS
+    print ("Ingrese la cantidad de productos a listar [1-%d]." % CANT_MAX_RESULTADOS)
     cant_productos = interaccion_usuario.ingresar_numero(1, CANT_MAX_RESULTADOS)
-    resultados = consultas.obtener_productos_mas_vendidos(archivo, cant_productos))
+    resultados = consultas.obtener_productos_mas_vendidos(archivo, cant_productos)
     
     # Exporta los resultados - se preparan los datos de acuerdo a la 
     #   documentación de la función del módulo salida_resultados.
@@ -44,9 +44,9 @@ def consultar_clientes_mas_gastadores(archivo):
     Se le solicita al usuario la cantidad de clientes que quiere listar.
     '''
     # Obtiene la cantidad a mostrar.
-    print ("Ingrese la cantidad de clientes a listar [1-%d]." % CANT_MAX_RESULTADOS
+    print ("Ingrese la cantidad de clientes a listar [1-%d]." % CANT_MAX_RESULTADOS)
     cant_clientes = interaccion_usuario.ingresar_numero(1, CANT_MAX_RESULTADOS)
-    resultados = consultas.obtener_clientes_mas_gastadores(archivo, cant_clientes))
+    resultados = consultas.obtener_clientes_mas_gastadores(archivo, cant_clientes)
     
     # Exporta los resultados - se preparan los datos de acuerdo a la 
     #   documentación de la función del módulo salida_resultados.
@@ -65,10 +65,10 @@ def consultar_productos_comprados_por_cliente(archivo):
     seleccionar el nombre completo de una lista.
     '''
     # Obtiene el nombre del cliente.
-    print ("Ingrese parte del nombre del cliente a consultar."
+    print ("Ingrese parte del nombre del cliente a consultar.")
     nombre_parcial = interaccion_usuario.ingresar_cadena_no_vacia()
     nombres_posibles = \
-        consultas.obtener_clientes_con_nombre_incompleto(archivo, nombre_parcial))    
+        consultas.obtener_clientes_con_nombre_incompleto(archivo, nombre_parcial)   
         
     if len(nombres_posibles) == 0:
         print ("No se encontraron productos con ese nombre.")
@@ -100,10 +100,10 @@ def consultar_clientes_de_producto(archivo):
     seleccionar el nombre completo de una lista.
     '''
     # Obtiene el nombre del producto.
-    print ("Ingrese parte del nombre del producto a consultar."
+    print ("Ingrese parte del nombre del producto a consultar.")
     nombre_parcial = interaccion_usuario.ingresar_cadena_no_vacia()
     nombres_posibles = \
-        consultas.obtener_productos_con_nombre_incompleto(archivo, nombre_parcial))
+        consultas.obtener_productos_con_nombre_incompleto(archivo, nombre_parcial)
     
     if len(nombres_posibles) == 0:
         print ("No se encontraron productos con ese nombre.")
@@ -143,8 +143,8 @@ def consulta_ventas():
     
     while seguir_consultando:
         print
-        (seleccion = interaccion_usuario.mostrar_menu_generico(
-                obtener_opciones_menu_principal(), "Salir"))
+        seleccion = interaccion_usuario.mostrar_menu_generico(
+                obtener_opciones_menu_principal(), "Salir")
         
         if seleccion == 0:
             consultar_productos_mas_vendidos(archivo)

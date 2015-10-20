@@ -24,7 +24,7 @@ def correr_prueba(caso_prueba, descripcion, resultados_pruebas):
         print ("Prueba %s: OK" % descripcion)
         resultados_pruebas["OK"] += 1
     except AssertionError:
-        print "Prueba %s: ERROR" % descripcion
+        print ("Prueba %s: ERROR" % descripcion)
         resultados_pruebas["ERROR"] += 1
     
 
