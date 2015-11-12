@@ -8,6 +8,8 @@ def cargar_archivo(nombre_archivo):
         En caso de error levanta una RunnableException con un mensaje 
     descriptivo.
     '''
+    ifile  = open('farmacia.csv', "rb")
+    reader = csv.reader(ifile)
     raise NotImplementedError
     
 
